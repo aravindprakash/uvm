@@ -1,5 +1,5 @@
 //-----------------------------------------------------------------------------
-// Author      :  Admin 
+// Author      :  Admin @ www.chipverify.com
 // Email       :  contact@chipverify.com
 // Description :  Top Level Design Module - This is what we have to verify.
 //                This simple design accepts data into the memory upon write

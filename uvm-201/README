@@ -1,0 +1,26 @@
+-------------------------------------------------------------------------------
+ Copyright (c) ChipVerify
+-------------------------------------------------------------------------------
+                                    README
+-------------------------------------------------------------------------------
+
+
+In uvm-101, we created a basic testbench structure with only "test" and "env".
+That was just enough to utilize a UVM component, and print "Hello UVM". But, in 
+a normal testbench we would have a data element that gets routed through diff.
+components. So, in this part, we will create a "data" packet object and send 
+it to the "driver". 
+
+Test                 uvm-101
+Environment          uvm-101
+
+Data Packet          uvm-201
+Driver               uvm-201
+
+As you might know already, the data packet is an abstract form of information
+that encapsulates a lot of information into a single entity - class object. We
+may not need all the information in the data object to drive signals to DUT.
+The driver obtains the data packet and extracts the required information and
+converts it into the pin-wiggles of DUT interface.
+
+
