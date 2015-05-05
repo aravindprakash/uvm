@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------
+ Copyright (c) ChipVerify
+-------------------------------------------------------------------------------
+                                    README
+-------------------------------------------------------------------------------
+
+
+In uvm-201, we added a data packet and the driver. So, until now we had only 4 
+verification components.
+
+Previous Sessions :
+Test           uvm-101
+Env            uvm-101
+Data           uvm-201
+Driver         uvm-201
+
+This session : 
+Sequencer      uvm-301
+Monitor        uvm-301
+
+Drawbacks of previous testbench structure
+1. Limited verification components
+2. Data packet is generated inside the driver
+3. "n_times" variable cannot be configured from outside
+4. Protocol to send data is hard coded in the main_phase
+5. DUT Interface was passed only to the Driver instead of all components
+
+In this session, we'll add a "sequencer" and a "monitor" to our testbench.
+The role of the sequencer is to generate data packets, and send it to the DUT.
+The role of the monitor is to monitor the DUT output
+
