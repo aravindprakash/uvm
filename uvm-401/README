@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+ Copyright (c) ChipVerify
+-------------------------------------------------------------------------------
+                                    README
+-------------------------------------------------------------------------------
+
+In uvm-301, we built our sequencer and monitor and it looks almost complete to
+a simple testbench. There's a packet generator, a driver to drive that packet
+to the DUT, a monitor that will listen for activity on the DUT ports, and we 
+can write different tests.
+
+In this session, let us create a scoreboard, and put the 3 compnonents, 
+[sequencer, driver, monitor] inside something called as an "agent". An agent is
+supposed to be a standalone component that can be instantiated in any environment.
+The interesting part is that an agent can be developed for each bus protocol, and
+you can just plug in/ instantiate the agent in the environment and it will be
+ready to use. We'll also see how the scoreboard is connected with the monitor
+inside the agent.
+
+In previous sessions, we used to get the DUT IF from the top level module inside
+the environment and pass it to the agent. From now on, we'll put the interface
+handle inside a configuration object, and pass the configuration object to the
+agent. The cfg object can have many other types of configuration parameters as
+well in addition to holding the interface handle. Basically, it should contain
+everything needed for an agent to configure itself and its sub-components.
