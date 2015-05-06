@@ -4,10 +4,10 @@
                                     README
 -------------------------------------------------------------------------------
 
-In uvm-301, we built our sequencer and monitor and it looks almost complete to
-a simple testbench. There's a packet generator, a driver to drive that packet
-to the DUT, a monitor that will listen for activity on the DUT ports, and we 
-can write different tests.
+In uvm-301, we built our sequencer and monitor and it looks almost complete. 
+There's a packet generator, a driver to drive that packet to the DUT, a monitor 
+that will listen for activity on the DUT ports and a sequencer to operate on
+sequences.
 
 In this session, let us create a scoreboard, and put the 3 compnonents, 
 [sequencer, driver, monitor] inside something called as an "agent". An agent is
