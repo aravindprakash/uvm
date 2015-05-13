@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+(c) ChipVerify
+-------------------------------------------------------------------------------
+                                 README
+-------------------------------------------------------------------------------
+
+The example illustrates the communication between two components, and how TLM
+classes can be used to create ports and exports to send data between the two.
+ComponentB requests for data from ComponentA using the get() method via get_port
+and ComponentA implements the get() method which was called by ComponentB. 
+ComponentA creates a new packet and outputs the data to ComponentB.
+
+      .------------------.                       .------------------.
+      |   ComponentA     |Export ----------> Port|    ComponentB    |
+      '------------------'                       '------------------'
+
+-------------------------------------------------------------------------------
+

@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------------
+(c) ChipVerify
+-------------------------------------------------------------------------------
+                                 README
+-------------------------------------------------------------------------------
+
+The example illustrates the communication between two components, and how TLM
+classes can be used to create ports and exports to send data between the two.
+ComponentA initiates data transfer by calling the task put (), whose implementa
+tion is decided by ComponentB.
+
+      .------------------.                       .------------------.
+      |   ComponentA     |Port ----------> Export|    ComponentB    |
+      '------------------'                       '------------------'
+
+In the next session, we'll see how ComponentB can request for data from 
+ComponentA using get () methods.
+-------------------------------------------------------------------------------
+
