@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------------
+(c) ChipVerify
+-------------------------------------------------------------------------------
+                                    README
+-------------------------------------------------------------------------------
+
+TLM - Transaction Level Modeling is an important concept in UVM. Most of the 
+connections between verification components are established using TLM and hence
+this series focuses on how components can be connected together using TLM inter
+face.
+
+tlm-101-put    :  How to use put() method to send data
+tlm-201-get    :  How to use get() method to request for data
+tlm-301-fifo   :  How to set up a TLM FIFO between two components so that they
+                  can operate independently
+tlm-401-hier   :  How to setup TLM for multiple levels of hierarchy
+tlm-501-ap     :  How Analysis Ports can be used to distribute data to multiple
+                  components
+-------------------------------------------------------------------------------

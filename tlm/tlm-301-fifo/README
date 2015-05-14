@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------
+(c) ChipVerify
+-------------------------------------------------------------------------------
+                                 README
+-------------------------------------------------------------------------------
+
+ComponentB in tlm-101 will be active only when its put() method is called. If
+we want to setup the connection such that both components operate independently 
+- ComponentA produces transactions and ComponentB continues to operate on those
+transactions - use a TLM fifo.
+
+ .------------.                  .----------.                  .------------.  
+ | ComponentA |Port -----> Export| TLM Fifo |Export -----> Port| ComponentB |
+ '------------'                  '----------'                  '------------'
+               put()                                     get()
+
+
+ComponentA will have a put_port () object and use put () to put the transaction
+ComponentB will have a get_port () object and use get () to receive transaction
+
+Connect ComponentA put_port with TLM FIFO put_export, and ComponentB get_port 
+with TLM FIFO get_export.
+-------------------------------------------------------------------------------
+
