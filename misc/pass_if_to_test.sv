@@ -3,6 +3,8 @@
 `include "uvm_macros.svh"
 import uvm_pkg::*;
 
+// Create a sample interface to play around with. Let it have a variable and a way to print 
+// it when it is changed externally
 interface my_if;
    logic [31:0] addr;
 
@@ -10,6 +12,8 @@ interface my_if;
       $display ("Check: addr=0x%0h", addr);
 endinterface
 
+// Create a UVM test class to run and test if a virtual interface can be assigned via a
+// hierarchical statement
 class my_test extends uvm_test;
    `uvm_component_utils (my_test)
    function new (string name = "my_test", uvm_component parent);
@@ -32,6 +36,7 @@ class my_test extends uvm_test;
    endtask
 endclass
 
+// Main testbench module to hold the main interface object and to kick off "my_test" 
 module tb;
    my_if _if();
 
