@@ -43,3 +43,32 @@ module tb;
    initial 
       run_test ("my_test");
 endmodule
+
+
+/* Simulation Log
+
+run -all;
+# KERNEL: UVM_INFO @ 0: reporter [RNTST] Running test my_test...
+# KERNEL: Check: addr=0x1111
+# KERNEL: Check: addr=0xfadefade
+# KERNEL: Check: addr=0xcafecafe
+# KERNEL: UVM_INFO /home/build/vlib1/vlib/uvm-1.2/src/base/uvm_objection.svh(1271) @ 30: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# KERNEL: UVM_INFO /home/build/vlib1/vlib/uvm-1.2/src/base/uvm_report_server.svh(855) @ 30: reporter [UVM/REPORT/SERVER] 
+# KERNEL: --- UVM Report Summary ---
+# KERNEL: 
+# KERNEL: ** Report counts by severity
+# KERNEL: UVM_INFO :    3
+# KERNEL: UVM_WARNING :    0
+# KERNEL: UVM_ERROR :    0
+# KERNEL: UVM_FATAL :    0
+# KERNEL: ** Report counts by id
+# KERNEL: [RNTST]     1
+# KERNEL: [TEST_DONE]     1
+# KERNEL: [UVM/RELNOTES]     1
+# KERNEL: 
+# RUNTIME: Info: RUNTIME_0068 uvm_root.svh (521): $finish called.
+# KERNEL: Time: 30 ns,  Iteration: 56,  Instance: /tb,  Process: @INITIAL#45_0@.
+# KERNEL: stopped at time: 30 ns
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+
+*/
