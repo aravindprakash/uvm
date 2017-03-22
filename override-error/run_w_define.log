@@ -1,0 +1,60 @@
+----------------------------------------------------------------
+UVM_INFO @ 0: reporter [RNTST] Running test derived_test...
+
+#### Factory Configuration (*)
+
+No instance overrides are registered with this factory
+
+Type Overrides:
+
+  Requested Type  Override Type
+  --------------  -------------
+  base_env        derived_env
+
+All types registered with the factory: 41 total
+(types without type names will not be printed)
+
+  Type Name
+  ---------
+  base_env
+  base_test
+  comp
+  derived_env
+  derived_test
+(*) Types with no associated type name will be printed as <unknown>
+
+####
+
+UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+---------------------------------------
+Name          Type          Size  Value
+---------------------------------------
+uvm_test_top  derived_test  -     @2593
+  m_base_env  derived_env   -     @2662
+    m_comp    comp          -     @2693
+---------------------------------------
+
+UVM_INFO ./tb/new_tb.sv(9) @ 0: uvm_test_top.m_base_env.m_comp [COMP] Hello there !
+
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :    3
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[COMP]     1
+[RNTST]     1
+[UVMTOP]     1
+Simulation complete via $finish(1) at time 0 FS + 179
