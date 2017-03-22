@@ -1,0 +1,7 @@
+file: ./tb/new_tb.sv
+      m_base_env.m_comp.display ();
+                      |
+ncvlog: *E,NOTCLM (./tb/new_tb.sv,61|22): m_comp is not a class item.
+        Total errors/warnings found outside modules and primitives:
+                errors: 1, warnings: 0
+
